@@ -44,7 +44,7 @@
                             <td><?= $ar->tanggal; ?></td>
 
                             <td>
-                                <?= anchor('admin/dashboard_admin/edit/' . $ar->id, '<div class="btn btn-secondary btn-sm"><i class="fas fa-edit"></i></div>') ?>
+                                <?= anchor('admin/dashboard_admin/edit/' . $ar->id, '<div class="btn btn-secondary btn-sm mb-3"><i class="fas fa-edit"></i></div>') ?>
 
                                 <?= anchor('admin/dashboard_admin/hapus/' . $ar->id, '<div class="btn btn-secondary btn-sm"><i class="fas fa-trash"></i></div>') ?>
 
