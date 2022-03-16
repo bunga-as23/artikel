@@ -5,7 +5,7 @@
         <div class="d-sm-flex align-items-center justify-content-between mb-4">
             <div class="container-fluid">
                 <center>
-                    <h1 class="h3 mb-2 text-gray-800">DAFTAR ARTIKEL BERITA TERKINI</h1>
+                    <h1 class="h3 mb-2 text-gray-800">DAFTAR ARTIKEL</h1>
                 </center>
 
                 <?= $this->session->flashdata('flash') ?>
