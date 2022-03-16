@@ -38,7 +38,7 @@
                                 <img src="<?= base_url() . '/uploads/' . $ar->gambar ?>" width="100">
                             </td>
                             <td><?= $ar->judul; ?></td>
-                            <td><?= $ar->artikel; ?></td>
+                            <td><?= substr($ar->artikel, 0, 300); ?></td>
                             <td><?= $ar->kategori; ?></td>
                             <td><?= $ar->nama_penulis; ?></td>
                             <td><?= $ar->tanggal; ?></td>
