@@ -1,37 +1,28 @@
-<?php foreach ($artikel as $ar) : ?>
+<div class="container-fluid">
+    <div class="d-sm-flex align-items-center justify-content-between mb-4">
+        <div class="container-fluid">
 
-    <div class="card-body">
+            <?php foreach ($artikel as $ar) : ?>
 
-        <h4><?= $ar->judul ?></h4>
-        <small><?= $ar->nama_penulis ?></small> -
-        <small><?= $ar->tanggal ?></small>
+                <div class="card-body">
+
+                    <h4><?= $ar->judul ?></h4>
+                    <small><?= $ar->nama_penulis ?></small> -
+                    <small><?= $ar->tanggal ?></small>
+
+                    <div class="col-md-5">
+                        <img src="<?= base_url() . 'uploads/' . $ar->gambar ?>" class="card-img-top" width="100px">
+                    </div>
+                    <p><?= $ar->artikel ?></p>
 
 
-        <!-- <div class="row"> -->
-        <div class="col-md-5">
-            <img src="<?= base_url() . 'uploads/' . $ar->gambar ?>" class="card-img-top" width="100px">
+                    <?= anchor('welcome', '<div class="btn btn-sm btn-danger">Kembali</div>') ?>
+                    <?= anchor('komentar', '<div class="btn btn-sm btn-primary"><i class="fas fa-comment"></i></div>') ?>
+
+                <?php endforeach; ?>
+
+
+                </div>
         </div>
-        <!-- <div class="col-md-0"> -->
-        <p><?= $ar->artikel ?></p>
-        <!-- <table class="table">
-                <tr>
-                    <td>Nama Penulis</td>
-                    <td><strong><?= $ar->nama_penulis ?></strong></td>
-                </tr>
-                <tr>
-                    <td>Kategori</td>
-                    <td><strong><?= $ar->kategori ?></strong></td>
-                </tr>
-                <tr>
-                    <td>Tanggal</td>
-                    <td><strong><?= $ar->tanggal ?></strong></td>
-                </tr>
-            </table> -->
-
-        <?= anchor('welcome', '<div class="btn btn-sm btn-danger">Kembali</div>') ?>
-        <!-- </div> -->
-
-        <!-- </div> -->
-    <?php endforeach; ?>
     </div>
-    </div>
+</div>
