@@ -11,9 +11,9 @@ class Auth extends CI_Controller
             'required' => 'Password wajib diisi!'
         ]);
         if ($this->form_validation->run() == FALSE) {
-            $this->load->view('templates/header');
+            // $this->load->view('templates/header');
             $this->load->view('form_login');
-            $this->load->view('templates/footer');
+            // $this->load->view('templates/footer');
         } else {
             $auth = $this->model_auth->cek_login();
             if ($auth == FALSE) {

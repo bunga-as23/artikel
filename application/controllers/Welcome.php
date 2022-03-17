@@ -7,11 +7,12 @@ class Welcome extends CI_Controller
 	{
 		$this->load->model('model_artikel');
 		$data['artikel'] = $this->model_artikel->getDataArtikel();
+		$data['artikel_terbaru'] = $this->model_artikel->getArtikelTerbaru();
 		if ($this->input->post('keyword')) {
 			$data['artikel'] = $this->model_artikel->cariDataArtikel();
 		}
 		$this->load->view('templates/header');
-		$this->load->view('templates/sidebar', $data);
+		// $this->load->view('templates/sidebar', $data);
 		$this->load->view('dashboard', $data);
 		$this->load->view('templates/footer');
 	}

@@ -7,6 +7,13 @@ class Model_artikel extends CI_Model
         $data = $this->db->query("select * from artikel");
         return $data->result();
     }
+
+    public function getArtikelTerbaru()
+    {
+        $data = $this->db->query("SELECT * FROM `artikel` ORDER BY tanggal DESC LIMIT 3");
+        return $data->result();
+    }
+
     public function tambah_artikel($data, $table)
     {
         $this->db->insert($table, $data);

@@ -1,51 +1,130 @@
-<div class="container-fluid">
+<!-- Bagian Carousel -->
+<section class="site-section pt-5 pb-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="owl-carousel owl-theme home-slider">
+                    <?php foreach ($artikel_terbaru as $at) : ?>
+                        <div>
+                            <a href="<?= base_url('dashboard/detail/' . $at->id) ?>" class="a-block d-flex align-items-center height-lg" style="background-image: url('<?= base_url() . 'uploads/' . $at->gambar; ?>'); ">
+                                <div class="text half-to-full">
+                                    <span class="category mb-5"><?= $at->kategori ?></span>
+                                    <div class="post-meta">
+                                        <span class="author mr-2"><?= $at->nama_penulis ?></span>&bullet;
+                                        <span class="mr-2"><?= $at->tanggal ?> </span> &bullet;
+                                        <span class="ml-2"><span class="fa fa-comments"></span> 3</span>
 
-    <font>
-        <marquee behavior="" direction="left">
-            <h3> SELAMAT DATANG DI WEBSITE KAMI</h3>
-        </marquee>
-    </font>
-
-    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-        <ol class="carousel-indicators">
-            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-        </ol>
-        <div class="carousel-inner">
-            <div class="carousel-item active">
-                <img src="<?= base_url('assets/img/slider8.jpg'); ?>" class="d-block w-100" alt="...">
-            </div>
-            <div class="carousel-item">
-                <img src="<?= base_url('assets/img/slider10.jpg'); ?>" class="d-block w-100" alt="...">
+                                    </div>
+                                    <h3><?= $at->judul ?></h3>
+                                    <p><?= substr($at->artikel, 0, 100); ?></p>
+                                </div>
+                            </a>
+                        </div>
+                    <?php endforeach; ?>
+                </div>
             </div>
         </div>
-        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="sr-only">Previous</span>
-        </a>
-        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="sr-only">Next</span>
-        </a>
+
     </div>
+</section>
+<!-- END section -->
 
-    <div class="row text-center mt-4">
+<!-- Bagian Artikel -->
+<section class="site-section py-sm">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <h2 class="mb-4">Artikel Tentang Inet</h2>
+            </div>
+        </div>
+        <div class="row blog-entries">
+            <div class="col-md-12 col-lg-8 main-content">
+                <div class="row">
+                    <?php foreach ($inet as $ar) : ?>
+                        <div class="col-md-6">
+                            <a href="<?= base_url('dashboard/detail/' . $ar->id) ?>" class="blog-entry element-animate" data-animate-effect="fadeIn">
+                                <img src="<?= base_url() . 'uploads/' . $ar->gambar; ?>" alt="Image placeholder">
+                                <div class="blog-content-body">
+                                    <div class="post-meta">
+                                        <span class="mr-2"><?= $ar->tanggal ?> </span> &bullet;
+                                        <span class="ml-2"><span class="fa fa-comments"></span> 3</span>
+                                    </div>
+                                    <h2><?= $ar->judul ?></h2>
+                                </div>
+                            </a>
+                        </div>
 
-        <?php foreach ($inet as $ar) : ?>
+                    <?php endforeach; ?>
 
-            <div class="card ml-3 mb-3" style="width: 17rem;">
-                <img src="<?= base_url() . 'uploads/' . $ar->gambar; ?>" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <a href="<?= base_url('dashboard/detail/' . $ar->id) ?>">
-                        <h6 class="card-title mb-3"><?= $ar->judul ?></h6>
-                    </a>
-                    <p><?= $ar->tanggal ?></p>
-                    <!-- <?= anchor('dashboard/detail/' . $ar->id) ?> -->
 
+                </div>
+
+                <div class="row mt-5">
+                    <div class="col-md-12 text-center">
+                        <nav aria-label="Page navigation" class="text-center">
+                            <ul class="pagination">
+                                <li class="page-item  active"><a class="page-link" href="#">&lt;</a></li>
+                                <li class="page-item"><a class="page-link" href="#">1</a></li>
+                                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                <li class="page-item"><a class="page-link" href="#">4</a></li>
+                                <li class="page-item"><a class="page-link" href="#">5</a></li>
+                                <li class="page-item"><a class="page-link" href="#">&gt;</a></li>
+                            </ul>
+                        </nav>
+                    </div>
                 </div>
             </div>
 
-        <?php endforeach; ?>
+            <!-- END main-content -->
+
+            <!-- Bagian Pencarian -->
+            <div class="col-md-12 col-lg-4 sidebar">
+
+                <!-- Bagian Profil Bungabarin -->
+                <div class="sidebar-box">
+                    <div class="bio text-center">
+                        <img src="<?= base_url('assets/images/person_1.jpg'); ?>" alt="Image Placeholder" class="img-fluid">
+                        <div class="bio-body">
+                            <h2>Bungabarin</h2>
+                            <p>Situs berita terpercaya di kabupaten jember dan sekitarnya</p>
+                            <p><a href="#" class="btn btn-primary btn-sm rounded">Follow Kami</a></p>
+                            <p class="social">
+                                <a href="#" class="p-2"><span class="fa fa-facebook"></span></a>
+                                <a href="#" class="p-2"><span class="fa fa-twitter"></span></a>
+                                <a href="#" class="p-2"><span class="fa fa-instagram"></span></a>
+                                <a href="#" class="p-2"><span class="fa fa-youtube-play"></span></a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <!-- END sidebar-box -->
+
+                <!-- Bagian Artikel Terbaru -->
+                <div class="sidebar-box">
+                    <h3 class="heading">Artikel Terbaru</h3>
+                    <div class="post-entry-sidebar">
+                        <ul>
+                            <?php foreach ($artikel_terbaru as $at) : ?>
+                                <li>
+                                    <a href="<?= base_url('dashboard/detail/' . $at->id) ?>">
+                                        <img src="<?= base_url() . 'uploads/' . $at->gambar; ?>" alt="Image placeholder" class="mr-4">
+                                        <div class="text">
+                                            <h4><?= $at->judul ?></h4>
+                                            <div class="post-meta">
+                                                <span class="mr-2"><?= $at->tanggal ?> </span>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li>
+                            <?php endforeach; ?>
+                        </ul>
+                    </div>
+                </div>
+                <!-- END sidebar-box -->
+            </div>
+            <!-- END sidebar -->
+
+        </div>
     </div>
-</div>
+</section>
