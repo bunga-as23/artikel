@@ -27,13 +27,15 @@
 
                     <div class="col-md-6">
                         <div class="">
-                            <h3>Quick Links</h3>
+                            <h3>Category</h3>
                             <ul class="list-unstyled">
-                                <li><a href="#">About Us</a></li>
-                                <li><a href="#">Travel</a></li>
-                                <li><a href="#">Adventure</a></li>
-                                <li><a href="#">Courses</a></li>
-                                <li><a href="#">Categories</a></li>
+                                <li><a href="<?= base_url() ?>kategori/news">News</a></li>
+                                <li><a href="<?= base_url() ?>kategori/hot">Hot</a></li>
+                                <li><a href="<?= base_url() ?>kategori/inet">Inet</a></li>
+                                <li><a href="<?= base_url() ?>kategori/sport">Sport</a></li>
+                                <li><a href="<?= base_url() ?>kategori/oto">Oto</a></li>
+                                <li><a href="<?= base_url() ?>kategori/food">Food</a></li>
+                                <li><a href="<?= base_url() ?>kategori/health">Health</a></li>
                             </ul>
                         </div>
                     </div>
