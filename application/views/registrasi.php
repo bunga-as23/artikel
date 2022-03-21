@@ -18,16 +18,20 @@
                                         <h1 class="h4 text-gray-900 mb-4">Daftar</h1>
                                     </div>
                                     <?= $this->session->flashdata('pesan') ?>
-                                    <form method="post" action="<?= base_url('auth/login') ?>" class="user">
+                                    <form method="post" action="<?= base_url('auth/registration') ?>" class="user">
                                         <div class="form-group">
-                                            <input type="text" class="form-control form-control-user" id="exampleInputEmail" aria-describedby="emailHelp" placeholder="Masukkan Username Anda" name="username" autocomplete>
+                                            <input type="text" class="form-control form-control-user" id="exampleInputEmail" aria-describedby="emailHelp" placeholder="Masukkan Username Anda" name="username" autocomplete="off">
                                             <?= form_error('username', '<div class="text-danger small ml-2">', '</div>'); ?>
                                         </div>
                                         <div class="form-group">
-                                            <input type="password" class="form-control form-control-user" id="exampleInputPassword" placeholder="Masukkan Password Anda" name="password">
-                                            <?= form_error('password', '<div class="text-danger small ml-2">', '</div>'); ?>
+                                            <input type="password" class="form-control form-control-user" id="exampleInputPassword" placeholder="Masukkan Password Anda" name="password1">
+                                            <?= form_error('password1', '<div class="text-danger small ml-2">', '</div>'); ?>
                                         </div>
-                                        <button type="submit" class="btn btn-dark form-control">Login</button>
+                                        <div class="form-group">
+                                            <input type="password" class="form-control form-control-user" id="exampleInputPassword" placeholder="Masukkan kembali Password Anda" name="password2">
+                                            <?= form_error('password2', '<div class="text-danger small ml-2">', '</div>'); ?>
+                                        </div>
+                                        <button type="submit" class="btn btn-dark form-control">Daftar</button>
                                     </form>
                                     <hr>
                                     <div class="text-center">

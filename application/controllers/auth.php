@@ -42,6 +42,30 @@ class Auth extends CI_Controller
         }
     }
 
+    public function registration()
+    {
+        $this->form_validation->set_rules('name', 'Name', 'required|trim');
+        $this->form_validation->set_rules('email', 'Email', 'required|trim|valid_email|is_unique[user.email]', [
+            'is_unique' => 'This email has already registered!'
+        ]);
+        $this->form_validation->set_rules('password1', 'Password', 'required|trim|min_length[8]|matches[password2]', [
+            'matches' => 'Password dont match!',
+            'min_length' => 'Password to short'
+        ]);
+        $this->form_validation->set_rules('password2', 'Password', 'required|trim|matches[password1]');
+
+
+        $data = [
+            'username' => $this->input->post('username'),
+            'password' => $this->input->post('password1'),
+            'role_id' => 2,
+        ];
+
+        $this->db->insert('user', $data);
+        $this->session->set_flashdata('message', '<div class="alert alert-success" role="alert">Congratulation! your account has been created. Please login</div>');
+        redirect('auth/login');
+    }
+
     public function logout()
     {
         $this->session->sess_destroy();
