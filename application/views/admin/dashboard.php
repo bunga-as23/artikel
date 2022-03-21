@@ -62,55 +62,52 @@
 
     <!-- modal -->
     <div class="modal fade" id="tambah_artikel" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">FORM INPUT ARTIKEL</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body">
-                    <form action="<?= base_url() . 'admin/dashboard_admin/tambah' ?>" method="post" enctype="multipart/form-data">
-
-                        <div class="form-group">
-                            <input type="text" name="judul" class="form-control" required placeholder="masukkan judul artikel">
-                        </div>
-                        <div class="form-group">
-                            <textarea type="text" name="artikel" class="form-control" cols="5" rows="20" required placeholder="masukkan artikel"></textarea>
-                        </div>
-
-                        <div class="form-group">
-                            <label>Kategori</label>
-                            <select class="form-control" name="kategori">
-                                <option>News</option>
-                                <option>Hot</option>
-                                <option>Inet</option>
-                                <option>Sport</option>
-                                <option>Oto</option>
-                                <option>Food</option>
-                                <option>Health</option>
-                            </select>
-                        </div>
-
-
-                        <div class="form-group">
-                            <input type="text" name="nama_penulis" class="form-control" required placeholder="masukkan nama penulis">
-                        </div>
-                        <div class="form-group">
-                            <input type="date" name="tanggal" required>
-                        </div>
-                        <div class="form-group">
-                            <input type="file" name="gambar" class="form-control">
-                        </div>
-
-
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
-                    <button type="submit" class="btn btn-primary">Simpan</button>
-                </div>
-                </form>
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">FORM INPUT ARTIKEL</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
             </div>
+            <div class="modal-body">
+                <form action="<?= base_url() . 'admin/dashboard_admin/tambah' ?>" method="post" enctype="multipart/form-data">
+
+                    <div class="form-group">
+                        <input type="text" name="judul" class="form-control" required placeholder="masukkan judul artikel">
+                    </div>
+                    <div class="form-group">
+                        <textarea type="text" name="artikel" class="form-control" cols="5" rows="20" required placeholder="masukkan artikel"></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Kategori</label>
+                        <select class="form-control" name="kategori">
+                            <option>News</option>
+                            <option>Hot</option>
+                            <option>Inet</option>
+                            <option>Sport</option>
+                            <option>Oto</option>
+                            <option>Food</option>
+                            <option>Health</option>
+                        </select>
+                    </div>
+
+
+                    <div class="form-group">
+                        <input type="text" name="nama_penulis" class="form-control" required placeholder="masukkan nama penulis">
+                    </div>
+                    <div class="form-group">
+                        <input type="date" name="tanggal" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="file" name="gambar" class="form-control">
+                    </div>
+
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                <button type="submit" class="btn btn-primary">Simpan</button>
+            </div>
+            </form>
         </div>
-    </div
