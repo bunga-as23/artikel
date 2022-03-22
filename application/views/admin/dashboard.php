@@ -46,7 +46,7 @@
                             <td>
                                 <?= anchor('admin/dashboard_admin/edit/' . $ar->id, '<div class="btn btn-secondary btn-sm mb-3"><i class="fas fa-edit"></i></div>') ?>
 
-                                <?= anchor('admin/dashboard_admin/hapus/' . $ar->id, '<div class="btn btn-secondary btn-sm"><i class="fas fa-trash"></i></div>') ?>
+                                <?= anchor('admin/dashboard_admin/hapus/' . $ar->id, '<div class="btn btn-secondary btn-sm"><i class="fas fa-trash"></i></div>', array('class' => 'delete', 'onclick' => "return confirmDialog();")) ?>
 
 
                             </td>
@@ -111,3 +111,9 @@
             </div>
             </form>
         </div>
+
+        <script>
+            function confirmDialog() {
+                return confirm('Apakah anda yakin akan menghapus data artikel ini?')
+            }
+        </script>
