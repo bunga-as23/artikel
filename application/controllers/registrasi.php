@@ -17,9 +17,8 @@ class Registrasi extends CI_Controller
         $this->form_validation->set_rules('password_2', 'Password', 'required|matches[password_1]');
 
         if ($this->form_validation->run() == FALSE) {
-            $this->load->view('templates/header');
+
             $this->load->view('registrasi');
-            $this->load->view('templates/footer');
         } else {
             $data = array(
                 'id'        => '',
