@@ -60,6 +60,7 @@
                 </div>
 
                 <div class="row mt-5">
+                    <?= $links ?>
                     <div class="col-md-12 text-center">
                         <nav aria-label="Page navigation" class="text-center">
                             <ul class="pagination">

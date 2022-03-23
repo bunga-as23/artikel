@@ -103,4 +103,17 @@ class Model_artikel extends CI_Model
         $this->db->or_like('alias', $keyword);
         return $this->db->get('kategori')->result_array();
     }
+
+
+    // Pagination biasa
+    public function countAll()
+    {
+        return $this->db->count_all('artikel');
+    }
+
+    public function fetchArtikel($limit, $start)
+    {
+        $this->db->limit($limit, $start);
+        return $this->db->get('artikel')->result();
+    }
 }
