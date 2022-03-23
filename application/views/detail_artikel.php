@@ -30,21 +30,35 @@
 
 
                 <div class="pt-5">
-                    <h3 class="mb-5">6 Comments</h3>
+                    <form action="<?= base_url() . 'review/tambah' ?>" method="post" class="mb-3">
+                        <div class="form-row align-items-center">
+                            <input type="hidden" name="artikelid" value="<?= $ar->id ?>">
+                            <input type="hidden" name="username" value="<?= $this->session->userdata('username') ?>">
+                            <div class="col-8 my-1">
+                                <input type="text" class="form-control" name="isikomen" placeholder="Tulis Komentar disini">
+                            </div>
+                            <div class="col-4 my-1">
+                                <button type="submit" class="btn btn-primary">Kirim</button>
+                            </div>
+                        </div>
+                    </form>
+                    <h3 class="mb-5"><?= count($komentar); ?> Comments</h3>
                     <ul class="comment-list">
-                        <li class="comment">
-                            <div class="vcard">
-                                <img src="<?= base_url() ?>assets/images/person_1.jpg" alt="Image placeholder">
-                            </div>
-                            <div class="comment-body">
-                                <h3>Jean Doe</h3>
-                                <div class="meta">January 9, 2018 at 2:21pm</div>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur quidem laborum necessitatibus, ipsam impedit vitae autem, eum officia, fugiat saepe enim sapiente iste iure! Quam voluptas earum impedit necessitatibus, nihil?</p>
-                                <p><a href="#" class="reply rounded">Reply</a></p>
-                            </div>
-                        </li>
+                        <?php foreach ($komentar as $ko) : ?>
+                            <li class="comment">
+                                <div class="vcard">
+                                    <img src="<?= base_url() ?>assets/images/person_1.jpg" alt="Image placeholder">
+                                </div>
+                                <div class="comment-body">
+                                    <h3><?= $ko->user ?></h3>
+                                    <div class="meta">January 9, 2018 at 2:21pm</div>
+                                    <p><?= $ko->isi_komentar ?></p>
+                                    <p><a href="#" class="reply rounded">Reply</a></p>
+                                </div>
+                            </li>
+                        <?php endforeach; ?>
 
-                        <li class="comment">
+                        <!-- <li class="comment">
                             <div class="vcard">
                                 <img src="<?= base_url() ?>assets/images/person_1.jpg" alt="Image placeholder">
                             </div>
@@ -54,7 +68,7 @@
                                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur quidem laborum necessitatibus, ipsam impedit vitae autem, eum officia, fugiat saepe enim sapiente iste iure! Quam voluptas earum impedit necessitatibus, nihil?</p>
                                 <p><a href="#" class="reply rounded">Reply</a></p>
                             </div>
-                        </li>
+                        </li> -->
                     </ul>
                     <!-- END comment-list -->
 

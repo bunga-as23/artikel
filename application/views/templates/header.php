@@ -50,9 +50,9 @@
 
                             <?php if ($this->session->userdata('username')) : ?>
                                 <p class="d-inline text-white">Selamat Datang <?= $this->session->userdata('username') ?></p>
-                                <a href="auth/logout_pengguna" class="btn btn-danger">Logout</a>
+                                <a href="<?= base_url('auth/logout_pengguna'); ?>" class="btn btn-danger">Logout</a>
                             <?php else : ?>
-                                <a href="auth/login" class="btn btn-success text-white">Login</a>
+                                <a href="<?= base_url('auth/login'); ?>" class="btn btn-success text-white">Login</a>
                                 <a href="<?= base_url('registrasi/index'); ?>" class="btn btn-primary text-white">Daftar</a>
                             <?php endif; ?>
                         </div>
