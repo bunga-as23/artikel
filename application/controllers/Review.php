@@ -17,6 +17,6 @@ class Review extends CI_Controller
         // var_dump($data);
         $this->model_review->tambah_review($data, 'review');
 
-        redirect('welcome');
+        redirect('dashboard/detail/' . $idartikel);
     }
 }

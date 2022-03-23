@@ -25,23 +25,26 @@
                     </div>
 
                     <?= anchor('welcome', '<div class="btn btn-sm btn-danger">Kembali</div>') ?>
-                    <?= anchor('komentar', '<div class="btn btn-sm btn-primary"><i class="fas fa-comment"></i></div>') ?>
+                    <!-- <?= anchor('komentar', '<div class="btn btn-sm btn-primary"><i class="fas fa-comment"></i></div>') ?> -->
                 <?php endforeach; ?>
 
 
                 <div class="pt-5">
-                    <form action="<?= base_url() . 'review/tambah' ?>" method="post" class="mb-3">
-                        <div class="form-row align-items-center">
-                            <input type="hidden" name="artikelid" value="<?= $ar->id ?>">
-                            <input type="hidden" name="username" value="<?= $this->session->userdata('username') ?>">
-                            <div class="col-8 my-1">
-                                <input type="text" class="form-control" name="isikomen" placeholder="Tulis Komentar disini">
+                    <!-- Jika tidak login maka kolom komentar tidak akan muncul -->
+                    <?php if ($this->session->userdata('username')) : ?>
+                        <form action="<?= base_url() . 'review/tambah' ?>" method="post" class="mb-3">
+                            <div class="form-row align-items-center">
+                                <input type="hidden" name="artikelid" value="<?= $ar->id ?>">
+                                <input type="hidden" name="username" value="<?= $this->session->userdata('username') ?>">
+                                <div class="col-8 my-1">
+                                    <input type="text" class="form-control" name="isikomen" placeholder="Tulis Komentar disini">
+                                </div>
+                                <div class="col-4 my-1">
+                                    <button type="submit" class="btn btn-primary">Kirim</button>
+                                </div>
                             </div>
-                            <div class="col-4 my-1">
-                                <button type="submit" class="btn btn-primary">Kirim</button>
-                            </div>
-                        </div>
-                    </form>
+                        </form>
+                    <?php endif; ?>
                     <h3 class="mb-5"><?= count($komentar); ?> Comments</h3>
                     <ul class="comment-list">
                         <?php foreach ($komentar as $ko) : ?>
