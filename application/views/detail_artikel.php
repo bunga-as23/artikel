@@ -54,7 +54,7 @@
                                 </div>
                                 <div class="comment-body">
                                     <h3><?= $ko->user ?></h3>
-                                    <div class="meta">January 9, 2018 at 2:21pm</div>
+                                    <div class="meta"><?= date("d F Y h:i:s",strtotime($ko->date_created)) ?></div> 
                                     <p><?= $ko->isi_komentar ?></p>
                                     <p><a href="#" class="reply rounded">Reply</a></p>
                                 </div>
