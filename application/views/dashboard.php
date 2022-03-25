@@ -58,24 +58,8 @@
 
 
                 </div>
-
-                <div class="row mt-5">
+                <div class="mt-5 text-center">
                     <?= $links ?>
-                    <div class="col-md-12 text-center">
-                        <nav aria-label="Page navigation" class="text-center">
-                            <ul class="pagination">
-                                <li class="page-item  active"><a class="page-link" href="#">&lt;</a></li>
-                                <li class="page-item"><a class="page-link" href="<?= base_url() ?>kategori/news">1</a></li>
-                                <li class="page-item"><a class="page-link" href="<?= base_url() ?>kategori/hot">2</a></li>
-                                <li class="page-item"><a class="page-link" href="<?= base_url() ?>kategori/inet">3</a></li>
-                                <li class="page-item"><a class="page-link" href="<?= base_url() ?>kategori/sport">4</a></li>
-                                <li class="page-item"><a class="page-link" href="<?= base_url() ?>kategori/oto">5</a></li>
-                                <li class="page-item"><a class="page-link" href="<?= base_url() ?>kategori/food">6</a></li>
-                                <li class="page-item"><a class="page-link" href="<?= base_url() ?>kategori/health">7</a></li>
-                                <li class="page-item"><a class="page-link" href="#">&gt;</a></li>
-                            </ul>
-                        </nav>
-                    </div>
                 </div>
             </div>
 

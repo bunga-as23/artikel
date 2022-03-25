@@ -18,7 +18,7 @@
 
                 <button class="btn btn-sm btn-secondary mb-3" data-toggle="modal" data-target="#tambah_artikel"> <i class="fas fa-plus fa-sm"></i> Tambah Artikel</button>
 
-                <table class="table table-bordered table-striped alert alert-dark">
+                <table class="table table-bordered table-striped alert alert-dark table-responsive" >
 
                     <tr>
                         <th class="text-center">No.</th>
