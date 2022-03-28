@@ -33,7 +33,7 @@ class Auth extends CI_Controller
                         redirect('admin/dashboard_admin');
                         break;
                     case 2:
-                        redirect('welcome');
+                        redirect(site_url());
                         break;
                     default:
                         break;
@@ -75,6 +75,6 @@ class Auth extends CI_Controller
     public function logout_pengguna()
     {
         $this->session->sess_destroy();
-        redirect('welcome');
+        redirect(site_url());
     }
 }
