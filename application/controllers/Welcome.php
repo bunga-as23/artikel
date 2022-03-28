@@ -16,12 +16,12 @@ class Welcome extends CI_Controller
 
 
 
-		$page = ($this->uri->segment(3)) ? $this->uri->segment(3) : 0;
+		$page = ($this->uri->segment(1)) ? $this->uri->segment(1) : 0;
 
-		$config['base_url']         = base_url('welcome');
+		$config['base_url']         = site_url();
 		$config['total_rows']       = $this->model_artikel->countAll();
-		$config['per_page']         = 6;
-		$config['uri_segment']      = 3;
+		$config['per_page']         = 3;
+		$config['uri_segment']      = 1;
 		// $config['num_links']        = 2;
 		$config['use_page_numbers'] = TRUE;
 
