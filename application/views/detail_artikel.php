@@ -6,7 +6,25 @@
             <div class="col-md-12 col-lg-8 main-content">
                 <!-- Isi Artikel -->
                 <?php foreach ($artikel as $ar) : ?>
-                    <img src="<?= base_url() . 'uploads/' . $ar->gambar ?>" alt="Image" class="img-fluid mb-5">
+                    <!-- <div class="owl-carousel owl-theme home-slider">
+        
+                        <div>
+                            <a href="#" class="a-block d-flex align-items-center height-lg" style="background-image: url('<?= base_url() . 'uploads/' . $ar->gambar; ?>'); ">
+                                
+                            </a>
+                        </div>
+                        <div>
+                            <a href="#" class="a-block d-flex align-items-center height-lg" style="background-image: url('<?= base_url() . 'uploads/' . $ar->gambar2; ?>'); ">
+                                
+                            </a>
+                        </div>
+                        <div>
+                            <a href="#" class="a-block d-flex align-items-center height-lg" style="background-image: url('<?= base_url() . 'uploads/' . $ar->gambar3; ?>'); ">
+                                
+                            </a>
+                        </div>  
+                    </div> -->
+                    <img src="<?= base_url() . 'uploads/' . $ar->gambar; ?>" alt="image" class="img-fluid mb-5">
                     <div class="post-meta">
                         <span class="author mr-2"><?= $ar->nama_penulis ?></span>&bullet;
                         <span class="mr-2"><?= $ar->tanggal ?> </span> &bullet;

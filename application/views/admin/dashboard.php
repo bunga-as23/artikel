@@ -100,7 +100,13 @@
                         <input type="date" name="tanggal" required>
                     </div>
                     <div class="form-group">
-                        <input type="file" name="gambar" class="form-control">
+                        <input type="file" name="gambar" class="form-control" required placeholder="gambar">
+                    </div>
+                    <div class="form-group">
+                        <input type="file" name="gambar2" class="form-control" required placeholder="gambar2">
+                    </div>
+                    <div class="form-group">
+                        <input type="file" name="gambar3" class="form-control" required placeholder="gambar3">
                     </div>
 
 

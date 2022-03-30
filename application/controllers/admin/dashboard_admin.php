@@ -37,6 +37,8 @@ class Dashboard_admin extends CI_Controller
     $nama_penulis           = $this->input->post('nama_penulis');
     $tanggal                = $this->input->post('tanggal');
     $gambar                 = $_FILES['gambar']['name'];
+    $gambar2                 = $_FILES['gambar2']['name'];
+    $gambar3                 = $_FILES['gambar3']['name'];
     if ($gambar = '') {
     } else {
       $config['upload_path'] = './uploads';
@@ -56,7 +58,9 @@ class Dashboard_admin extends CI_Controller
       'kategori'          => $kategori,
       'nama_penulis'      => $nama_penulis,
       'tanggal'           => $tanggal,
-      'gambar'            => $gambar
+      'gambar'            => $gambar,
+      'gambar2'            => $gambar2,
+      'gambar3'            => $gambar3
 
     );
 
