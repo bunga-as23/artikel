@@ -40,6 +40,16 @@
                                 <img src="<?= base_url() . 'uploads/' . $ar->gambar ?>" width="100">
                                 <input type="file" name="gambar" id="gambar" class="form-control" value="<?= base_url() . 'uploads/' .  $ar->gambar ?>">
                             </div>
+                            <div class="from-group">
+                                <label>Gambar :</label>
+                                <img src="<?= base_url() . 'uploads/' . $ar->gambar2 ?>" width="100">
+                                <input type="file" name="gambar" id="gambar2" class="form-control" value="<?= base_url() . 'uploads/' .  $ar->gambar ?>">
+                            </div>
+                            <div class="from-group">
+                                <label>Gambar :</label>
+                                <img src="<?= base_url() . 'uploads/' . $ar->gambar3 ?>" width="100">
+                                <input type="file" name="gambar" id="gambar3" class="form-control" value="<?= base_url() . 'uploads/' .  $ar->gambar ?>">
+                            </div>
 
                             <br>
                             <button class="btn btn-secondary" type="submit" name="submit">Ubah Data</button>

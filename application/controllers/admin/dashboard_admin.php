@@ -55,7 +55,7 @@ class Dashboard_admin extends CI_Controller
     if ($gambar2 = '') {
     } else {
       $config['upload_path'] = './uploads';
-      $config['allowed_types'] = 'jpg|jpeg|png|gif';
+      $config['allowed_types'] = 'jpg|jpeg|png|gif|';
 
       $this->load->library('upload', $config);
       if (!$this->upload->do_upload('gambar2')) {
@@ -122,6 +122,8 @@ class Dashboard_admin extends CI_Controller
     $nama_penulis       = $this->input->post('nama_penulis');
     $tanggal            = $this->input->post('tanggal');
     $gambar             = $this->input->post('gambar');
+    $gambar2             = $this->input->post('gambar2');
+    $gambar3             = $this->input->post('gambar3');
     if ($gambar = '') {
     } else {
       $config['upload_path'] = './uploads';
@@ -134,6 +136,32 @@ class Dashboard_admin extends CI_Controller
         $gambar = $this->upload->data('file_name');
       }
     }
+    //gambar2
+    if ($gambar2 = '') {
+    } else {
+      $config['upload_path'] = './uploads';
+      $config['allowed_types'] = 'jpg|jpeg|png|gif';
+
+      $this->load->library('upload', $config);
+      if (!$this->upload->do_upload('gambar')) {
+        echo "Gambar Gagal diubah!";
+      } else {
+        $gambar2 = $this->upload->data('file_name');
+      }
+    }
+    //gambar3
+    if ($gambar3 = '') {
+    } else {
+      $config['upload_path'] = './uploads';
+      $config['allowed_types'] = 'jpg|jpeg|png|gif';
+
+      $this->load->library('upload', $config);
+      if (!$this->upload->do_upload('gambar')) {
+        echo "Gambar Gagal diubah!";
+      } else {
+        $gambar3 = $this->upload->data('file_name');
+      }
+    }
 
     $data = array(
       'judul'             => $judul,
@@ -141,7 +169,9 @@ class Dashboard_admin extends CI_Controller
       'kategori'          => $kategori,
       'nama_penulis'      => $nama_penulis,
       'tanggal'           => $tanggal,
-      'gambar'            => $gambar
+      'gambar'            => $gambar,
+      'gambar2'            => $gambar2,
+      'gambar3'            => $gambar3
     );
 
     $where = array(
