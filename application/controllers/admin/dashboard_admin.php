@@ -51,6 +51,32 @@ class Dashboard_admin extends CI_Controller
         $gambar = $this->upload->data('file_name');
       }
     }
+    //save gambar 2
+    if ($gambar2 = '') {
+    } else {
+      $config['upload_path'] = './uploads';
+      $config['allowed_types'] = 'jpg|jpeg|png|gif';
+
+      $this->load->library('upload', $config);
+      if (!$this->upload->do_upload('gambar2')) {
+        echo "Gambar 2 Gagal diupload!";
+      } else {
+        $gambar2 = $this->upload->data('file_name');
+      }
+    }
+    //save gambar 3
+    if ($gambar3 = '') {
+    } else {
+      $config['upload_path'] = './uploads';
+      $config['allowed_types'] = 'jpg|jpeg|png|gif';
+
+      $this->load->library('upload', $config);
+      if (!$this->upload->do_upload('gambar3')) {
+        echo "Gambar Gagal diupload!";
+      } else {
+        $gambar3 = $this->upload->data('file_name');
+      }
+    }
 
     $data = array(
       'judul'             => $judul,

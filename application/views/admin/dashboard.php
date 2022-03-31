@@ -18,7 +18,7 @@
 
                 <button class="btn btn-sm btn-secondary mb-3" data-toggle="modal" data-target="#tambah_artikel"> <i class="fas fa-plus fa-sm"></i> Tambah Artikel</button>
 
-                <table class="table table-bordered table-striped alert alert-dark table-responsive" >
+                <table class="table table-bordered table-striped alert alert-dark table-responsive">
 
                     <tr>
                         <th class="text-center">No.</th>
@@ -103,10 +103,10 @@
                         <input type="file" name="gambar" class="form-control" required placeholder="gambar">
                     </div>
                     <div class="form-group">
-                        <input type="file" name="gambar2" class="form-control" required placeholder="gambar2">
+                        <input type="file" name="gambar2" class="form-control" placeholder="gambar2">
                     </div>
                     <div class="form-group">
-                        <input type="file" name="gambar3" class="form-control" required placeholder="gambar3">
+                        <input type="file" name="gambar3" class="form-control" placeholder="gambar3">
                     </div>
 
 
